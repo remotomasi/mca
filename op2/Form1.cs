@@ -36,13 +36,12 @@ namespace op2
 			// Set Minimum to 1 to represent the first file being copied.
 			progressBar1.Minimum = 1;
 			// Set Maximum to the total number of files to copy.
-			progressBar1.Maximum = 8;
+			progressBar1.Maximum = 4;
 			// Set the initial value of the ProgressBar.
 			progressBar1.Value = 1;
 			// Set the Step property to a value of 1 to represent each file being copied.
-			progressBar1.Step = 8;
+			progressBar1.Step = 4;
 
-			progressBar1.PerformStep();
 
 			int max = 13;
             string lon = "";
@@ -58,7 +57,8 @@ namespace op2
             string z = "";
 			string today = String.Format("{0:yyyyMMdd}", thisday);
 
-			eliminaFile();
+            eliminaFile();
+            progressBar1.PerformStep();
 
 			// Aggiorniamo le immagini 
 			using (WebClient Client = new WebClient())
@@ -69,68 +69,67 @@ namespace op2
 				int f;
 
 				f = 1;
-				Client.DownloadFile("http://www.wetterzentrale.de/pics/Rtavn063.gif", "europeC" + f + ".gif");
+                Client.DownloadFile("http://www.wetterzentrale.de/pics/Rtavn063.gif", "europeC" + f + ".gif");
 
-				for (f = 2; f <= max; f++)
-				{
-					if (!File.Exists("europeC" + f + ".gif"))
-					{
-						URLwind = "http://www.wetterzentrale.de/pics/Rtavn" + f * 6 + "3.gif";
-						Client.DownloadFile(URLwind, "europeC" + f + ".gif");
-					}
-				}
-				progressBar1.PerformStep();
+                for (f = 2; f <= max; f++)
+                {
+                    if (!File.Exists("europeC" + f + ".gif"))
+                    {
+                        URLwind = "http://www.wetterzentrale.de/pics/Rtavn" + f * 6 + "3.gif";
+                        Client.DownloadFile(URLwind, "europeC" + f + ".gif");
+                    }
+                }
 
-				f = 1;
-				Client.DownloadFile("http://www.wetterzentrale.de/pics/Rtavn064.gif", "europeR" + f + ".gif");
+                f = 1;
+                Client.DownloadFile("http://www.wetterzentrale.de/pics/Rtavn064.gif", "europeR" + f + ".gif");
 
-				for (f = 2; f <= max; f++)
-				{
-					if (!File.Exists("europeR" + f + ".gif"))
-					{
-						URLrain = "http://www.wetterzentrale.de/pics/Rtavn" + f * 6 + "4.gif";
-						Client.DownloadFile(URLrain, "europeR" + f + ".gif");
-					}
-				}
-				progressBar1.PerformStep();
+                for (f = 2; f <= max; f++)
+                {
+                    if (!File.Exists("europeR" + f + ".gif"))
+                    {
+                        URLrain = "http://www.wetterzentrale.de/pics/Rtavn" + f * 6 + "4.gif";
+                        Client.DownloadFile(URLrain, "europeR" + f + ".gif");
+                    }
+                }
 
-				f = 1;
-				Client.DownloadFile("http://www.wetterzentrale.de/pics/Rtavn068.gif", "europeW" + f + ".gif");
+                f = 1;
+                Client.DownloadFile("http://www.wetterzentrale.de/pics/Rtavn068.gif", "europeW" + f + ".gif");
 
-				for (f = 2; f <= max; f++)
-				{
-					if (!File.Exists("europeW" + f + ".gif"))
-					{
-						URLwind = "http://www.wetterzentrale.de/pics/Rtavn" + f * 6 + "8.gif";
-						Client.DownloadFile(URLwind, "europeW" + f + ".gif");
-					}
-				}
-				progressBar1.PerformStep();
+                for (f = 2; f <= max; f++)
+                {
+                    if (!File.Exists("europeW" + f + ".gif"))
+                    {
+                        URLwind = "http://www.wetterzentrale.de/pics/Rtavn" + f * 6 + "8.gif";
+                        Client.DownloadFile(URLwind, "europeW" + f + ".gif");
+                    }
+                }
 
-				f = 1;
-				Client.DownloadFile("http://www.wetterzentrale.de/pics/Rtavn062.gif", "europe8" + f + ".gif");
+                f = 1;
+                Client.DownloadFile("http://www.wetterzentrale.de/pics/Rtavn062.gif", "europe8" + f + ".gif");
 
-				for (f = 2; f <= max; f++)
-				{
-					if (!File.Exists("europe8" + f + ".gif"))
-					{
-						URL850t = "http://www.wetterzentrale.de/pics/Rtavn" + f * 6 + "2.gif";
-						Client.DownloadFile(URL850t, "europe8" + f + ".gif");
-					}
-				}
-				progressBar1.PerformStep();
+                for (f = 2; f <= max; f++)
+                {
+                    if (!File.Exists("europe8" + f + ".gif"))
+                    {
+                        URL850t = "http://www.wetterzentrale.de/pics/Rtavn" + f * 6 + "2.gif";
+                        Client.DownloadFile(URL850t, "europe8" + f + ".gif");
+                    }
+                }
 
 				f = 1;
 				Client.DownloadFile("http://www.wetterzentrale.de/pics/Rtavn061.gif", "europe5" + f + ".gif");
 
-				for (f = 2; f <= max; f++)
-				{
-					if (!File.Exists("europe5" + f + ".gif"))
-					{
-						URL500p = "http://www.wetterzentrale.de/pics/Rtavn" + f * 6 + "1.gif";
-						Client.DownloadFile(URL500p, "europe5" + f + ".gif");
-					}
-				}
+                for (f = 2; f <= max; f++)
+                {
+                    if (!File.Exists("europe5" + f + ".gif"))
+                    {
+                        URL500p = "http://www.wetterzentrale.de/pics/Rtavn" + f * 6 + "1.gif";
+                        Client.DownloadFile(URL500p, "europe5" + f + ".gif");
+                    }
+                }
+
+                URL500p = "http://www.wetterzentrale.de/pics/Rtavn061.gif";
+
 				progressBar1.PerformStep();
 
                 lon = this.longBox.Text;
@@ -169,7 +168,6 @@ namespace op2
                     pictureEvo.SizeMode = PictureBoxSizeMode.StretchImage;
                     this.pictureSpaghi.ImageLocation = "spaghi.gif";
                     pictureSpaghi.SizeMode = PictureBoxSizeMode.StretchImage;
-                    progressBar1.PerformStep();
                 }
                 else
                 {
@@ -177,7 +175,6 @@ namespace op2
                     pictureEvo.SizeMode = PictureBoxSizeMode.StretchImage;
                     this.pictureSpaghi.ImageLocation = convertToGif("spaghi.png");
                     pictureSpaghi.SizeMode = PictureBoxSizeMode.StretchImage;
-                    progressBar1.PerformStep();
                 }
                 
 				pictureSat.ImageLocation = ("europeC1.gif");
@@ -358,25 +355,28 @@ namespace op2
         private void previsioni_Click(object sender, EventArgs e)
         {
             string paese = cityCombo.Text; //cityText.Text;
-            string file0 = "";
-            string URLxml0 = "";
+            string file0, file1 = "";
+            string URLxml0, URLxml1 = "";
 
             using (WebClient Client = new WebClient())
             {
                 // Scarico i valori meteo
-                URLxml0 = "http://api.wunderground.com/api/c29a37bdfbb58905/conditions/q/IT/" + paese + ".xml";
+                //URLxml0 = "http://api.wunderground.com/api/c29a37bdfbb58905/conditions/q/IT/" + paese + ".xml";
+                URLxml1 = "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22" + paese + "%22)&format=xml&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys";
 
 				try
-                {   
-                    Client.DownloadFile(URLxml0, "daily0.xml");
-                    file0 = "daily0.xml";
+                {
+                    //Client.DownloadFile(URLxml0, "daily0.xml");
+                    Client.DownloadFile(URLxml1, "daily1.xml");
+                    //file0 = "daily0.xml";
+                    file1 = "daily1.xml";
                 }
                 catch (WebException we)
                 {
                     MessageBox.Show("Problem in Downloading file " + we);
                 }
-                aggiornaDatiPaese(paese, file0);
-                currentWeather(paese, file0);
+                aggiornaDatiPaese(paese, file1);
+                currentWeather(paese, file1);
             }
         }
 
@@ -385,6 +385,7 @@ namespace op2
 			string today = String.Format("{0:yyyyMMdd}", DateTime.Today);
             int hour = DateTime.Now.Hour;
             string z = "";
+            string img = "";
             
             // Aggiorniamo le immagini 
 			using (WebClient Client = new WebClient ()) 
@@ -456,36 +457,54 @@ namespace op2
                 string text = File.ReadAllText(file);
                 size = text.Length;
 
-                XmlTextReader reader = new XmlTextReader("daily0.xml");
+                XmlTextReader reader = new XmlTextReader("daily1.xml");
                 reader.Read();
 
-                while (!reader.EOF && reader.Name != "weather")
-                    reader.Read();
-                coperturaBox0.Text = "Copertura: " + reader.ReadString() + /*" %" +*/ "\n";
-
-                while (!reader.EOF && reader.Name != "temp_c")
-					reader.Read();
-                tempMaxBox0.Text = "Temperatura: " + reader.ReadString() + " °C" + "\n";
-
-                while (!reader.EOF && reader.Name != "relative_humidity")
-                    reader.Read();
-                humidityBox0.Text = "Umidita': " + reader.ReadString() + "\n";
-
-                while (!reader.EOF && reader.Name != "wind_dir")
-                    reader.Read();
-                windDirBox0.Text = "Direzione: " + reader.ReadString() + "\n";
+                //while (!reader.EOF && reader.Name != "temp_c")
+                //    reader.Read();
+                //tempMaxBox0.Text = "Temperatura: " + reader.ReadString() + " °C" + "\n";
                 
-                while (!reader.EOF && reader.Name != "wind_kph")
+                while (!reader.EOF && reader.Name != "yweather:wind")
                     reader.Read();
-                windVelBox0.Text = "Velocita': " + reader.ReadString() + " Km/h" + "\n";
+                reader.MoveToContent();
+                windDirBox0.Text = "Direzione: " + winDirection(Convert.ToInt32(reader.GetAttribute("direction")));
 
-                while (!reader.EOF && reader.Name != "pressure_mb")
+                while (!reader.EOF && reader.Name != "yweather:wind")
                     reader.Read();
-                pressureBox0.Text = "Pressione: " + reader.ReadString() + " hPa" + "\n";
+                reader.MoveToContent();
+                windVelBox0.Text = "Velocita': " + Convert.ToInt32(reader.GetAttribute("speed").ToString()) * 1.609 + " Km/h" + "\n";
 
-                while (!reader.EOF && reader.Name != "precip_today_metric")
+                while (!reader.EOF && reader.Name != "yweather:atmosphere")
                     reader.Read();
-                precipitationBox0.Text = "Precipitazioni: " + reader.ReadString() + " mm\n";
+                reader.MoveToContent();
+                humidityBox0.Text = "Umidita': " + reader.GetAttribute("humidity") + " %" + "\n";
+
+                while (!reader.EOF && reader.Name != "yweather:atmosphere")
+                    reader.Read();
+                reader.MoveToContent();
+                pressureBox0.Text = "Pressione': " + Convert.ToInt32(reader.GetAttribute("pressure").ToString().Replace(".","")) * 0.3386  + " hPa" + "\n";
+
+                while (!reader.EOF && reader.Name != "yweather:condition")
+                    reader.Read();
+                reader.MoveToContent();
+                tempMinBox0.Text = "Temperatura: " + (Convert.ToInt32(reader.GetAttribute("temp").ToString()) - 32) * 5 / 9 + " °C" + "\n";
+
+                while (!reader.EOF && reader.Name != "yweather:condition")
+                    reader.Read();
+                reader.MoveToContent();
+                skyBox0.Text = "Copertura: " + reader.GetAttribute("text") + "\n";
+                
+                //while (!reader.EOF && reader.Name != "precip_today_metric")
+                //    reader.Read();
+                //precipitationBox0.Text = "Precipitazioni: " + reader.ReadString() + " mm\n";
+
+                //while (!reader.EOF && reader.Name != "description")
+                //    reader.Read();
+                ////reader.MoveToContent();
+                //precipitationBox0.Text = "img:" + reader.ReadString();
+                ////img = reader.GetAttribute("src");
+
+                ////pictureBox1.ImageLocation = img;
 
                 reader.Close();
             }
@@ -497,6 +516,25 @@ namespace op2
             {
                 MessageBox.Show("Problem in opening Xml file Current Weather" + xmle);
             }
+            catch (NullReferenceException ne)
+            {
+                MessageBox.Show("Problem in reading Xml variable" + ne);
+            }
+        }
+
+        string winDirection(int deg)
+        {
+            string dir = "";
+            if (deg > 337.5 || deg <= 22.5) dir = "N";
+            if (deg > 22.5 && deg <= 67.5) dir = "NE";
+            if (deg > 67.5 && deg <= 112.5) dir = "E";
+            if (deg > 112.5 && deg <= 157.5) dir = "SE";
+            if (deg > 157.5 && deg <= 202.5) dir = "S";
+            if (deg > 202.5 && deg <= 247.5) dir = "SW";
+            if (deg > 247.5 && deg <= 292.5) dir = "W";
+            if (deg > 292.5 && deg <= 337.5) dir = "NW";
+
+            return dir;
         }
 
         void aggiornaDatiPaese(string paese, string file)
@@ -512,23 +550,23 @@ namespace op2
                 XmlTextReader reader = new XmlTextReader(file);
                 reader.Read();
 
-                while (!reader.EOF && reader.Name != "full")
+                while (!reader.EOF && reader.Name != "title")
                     reader.Read();
-                cityBox.Text = reader.ReadString();
+                cityBox.Text = reader.ReadString().Substring(17);
 
-                while (!reader.EOF && reader.Name != "latitude")
+                while (!reader.EOF && reader.Name != "geo:lat")
                     reader.Read();
                 this.latBox.Text = reader.ReadString();
                 infoBox.Text = "Latitudine:     " + this.latBox.Text + "\n";
 
-                while (!reader.EOF && reader.Name != "longitude")
+                while (!reader.EOF && reader.Name != "geo:long")
                     reader.Read();
                 this.longBox.Text = reader.ReadString();
                 infoBox.Text += "Longitudine:     " + this.longBox.Text + "\n";
 
-                while (!reader.EOF && reader.Name != "elevation")
-                    reader.Read();
-                infoBox.Text += "Altitudine:     " + reader.ReadString();
+                //while (!reader.EOF && reader.Name != "elevation")
+                //    reader.Read();
+                //infoBox.Text += "Altitudine:     " + reader.ReadString();
 
                 reader.Close();
             }

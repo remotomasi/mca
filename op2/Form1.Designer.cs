@@ -43,9 +43,9 @@
             this.longBox = new System.Windows.Forms.TextBox();
             this.latBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cityCombo = new System.Windows.Forms.ComboBox();
             this.errorLbl = new System.Windows.Forms.Label();
-            this.notaCityLbl = new System.Windows.Forms.Label();
             this.cittaLbl = new System.Windows.Forms.Label();
             this.precipitationBox0 = new System.Windows.Forms.RichTextBox();
             this.coperturaBox0 = new System.Windows.Forms.RichTextBox();
@@ -87,6 +87,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.cityGroup.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureSat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEvo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureSpaghi)).BeginInit();
@@ -247,9 +248,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.cityCombo);
             this.groupBox1.Controls.Add(this.errorLbl);
-            this.groupBox1.Controls.Add(this.notaCityLbl);
             this.groupBox1.Controls.Add(this.cittaLbl);
             this.groupBox1.Controls.Add(this.precipitationBox0);
             this.groupBox1.Controls.Add(this.coperturaBox0);
@@ -268,6 +269,14 @@
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Situazione attuale in Italia";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(179, 22);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 69);
+            this.pictureBox1.TabIndex = 69;
+            this.pictureBox1.TabStop = false;
             // 
             // cityCombo
             // 
@@ -288,17 +297,6 @@
             this.errorLbl.Size = new System.Drawing.Size(121, 27);
             this.errorLbl.TabIndex = 68;
             this.errorLbl.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // notaCityLbl
-            // 
-            this.notaCityLbl.BackColor = System.Drawing.Color.Transparent;
-            this.notaCityLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.notaCityLbl.Location = new System.Drawing.Point(174, 21);
-            this.notaCityLbl.Name = "notaCityLbl";
-            this.notaCityLbl.Size = new System.Drawing.Size(145, 66);
-            this.notaCityLbl.TabIndex = 67;
-            this.notaCityLbl.Text = "Per consultare il meteo in una città italiana inserisci il suo nome nello spazio " +
-                "bianco e schiaccia il pulsante \"Meteo\" :)";
             // 
             // cittaLbl
             // 
@@ -484,8 +482,8 @@
             // 
             // tabMaps
             // 
-            this.tabMaps.Controls.Add(this.tabPage5);
             this.tabMaps.Controls.Add(this.tabPage6);
+            this.tabMaps.Controls.Add(this.tabPage5);
             this.tabMaps.Controls.Add(this.tabPage3);
             this.tabMaps.Controls.Add(this.tabPage4);
             this.tabMaps.Controls.Add(this.tabPage2);
@@ -704,6 +702,7 @@
             this.cityGroup.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureSat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEvo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureSpaghi)).EndInit();
@@ -783,9 +782,9 @@
         private System.Windows.Forms.Label longLbl;
         private System.Windows.Forms.Label cittaLbl;
         private System.Windows.Forms.GroupBox roseBox;
-        private System.Windows.Forms.Label notaCityLbl;
         private System.Windows.Forms.Label errorLbl;
         private System.Windows.Forms.ComboBox cityCombo;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
