@@ -10,11 +10,11 @@ using System.IO;
 using System.Windows.Forms;
 using System.Net;
 using System.Timers;
-using Gif.Components;
+//using Gif.Components;
 using System.Drawing.Imaging;
 using System.Xml.Linq;
-using PdfSharp.Pdf;
-using PdfSharp.Drawing;
+//using PdfSharp.Pdf;
+//using PdfSharp.Drawing;
 using System.Diagnostics;
 
 namespace op2
@@ -545,36 +545,36 @@ namespace op2
 
 		private void makePDF_Click(object sender, EventArgs e)
 		{
-			PdfDocument pdf = new PdfDocument();
-			PdfPage pdfPage = pdf.AddPage();
-			XGraphics graph = XGraphics.FromPdfPage(pdfPage);
-			XFont font = new XFont("Verdana", 20, XFontStyle.Bold);
+            //PdfDocument pdf = new PdfDocument();
+            //PdfPage pdfPage = pdf.AddPage();
+            //XGraphics graph = XGraphics.FromPdfPage(pdfPage);
+            //XFont font = new XFont("Verdana", 20, XFontStyle.Bold);
 
-			graph.DrawString("Meteo Casarano", font, XBrushes.Black,
-				new XRect(40, 30, pdfPage.Width.Point, pdfPage.Height.Point), XStringFormats.TopLeft);
-			graph.DrawString("---------------------", font, XBrushes.Black,
-				new XRect(40, 40, pdfPage.Width.Point, pdfPage.Height.Point), XStringFormats.TopLeft);
+            //graph.DrawString("Meteo Casarano", font, XBrushes.Black,
+            //    new XRect(40, 30, pdfPage.Width.Point, pdfPage.Height.Point), XStringFormats.TopLeft);
+            //graph.DrawString("---------------------", font, XBrushes.Black,
+            //    new XRect(40, 40, pdfPage.Width.Point, pdfPage.Height.Point), XStringFormats.TopLeft);
 
-			XImage imgPres = XImage.FromFile(pictureEvo.ImageLocation);
-			XImage imgRain = XImage.FromFile(pictureRain.ImageLocation);
-			XImage imgWind = XImage.FromFile(pictureWind.ImageLocation);
-			XImage img850t = XImage.FromFile(picture850t.ImageLocation);
-			XImage img500p = XImage.FromFile(picture500p.ImageLocation);
-			graph.DrawImage(imgPres, 50, 70, 500, 333);
-			graph.DrawImage(imgRain, 50, 410, 500, 333);
+            //XImage imgPres = XImage.FromFile(pictureEvo.ImageLocation);
+            //XImage imgRain = XImage.FromFile(pictureRain.ImageLocation);
+            //XImage imgWind = XImage.FromFile(pictureWind.ImageLocation);
+            //XImage img850t = XImage.FromFile(picture850t.ImageLocation);
+            //XImage img500p = XImage.FromFile(picture500p.ImageLocation);
+            //graph.DrawImage(imgPres, 50, 70, 500, 333);
+            //graph.DrawImage(imgRain, 50, 410, 500, 333);
 
-			PdfPage pdfPage2 = pdf.AddPage();
-			XGraphics graph2 = XGraphics.FromPdfPage(pdfPage2);
-			graph2.DrawImage(imgWind, 50, 70, 500, 333);
-			graph2.DrawImage(img850t, 50, 410, 500, 333);
+            //PdfPage pdfPage2 = pdf.AddPage();
+            //XGraphics graph2 = XGraphics.FromPdfPage(pdfPage2);
+            //graph2.DrawImage(imgWind, 50, 70, 500, 333);
+            //graph2.DrawImage(img850t, 50, 410, 500, 333);
 
-			PdfPage pdfPage3 = pdf.AddPage();
-			XGraphics graph3 = XGraphics.FromPdfPage(pdfPage3);
-			graph3.DrawImage(img500p, 50, 70, 500, 333);
+            //PdfPage pdfPage3 = pdf.AddPage();
+            //XGraphics graph3 = XGraphics.FromPdfPage(pdfPage3);
+            //graph3.DrawImage(img500p, 50, 70, 500, 333);
 
-			pdf.Save("firstpage.pdf");
-			Process.Start("firstpage.pdf");
-			pdf.Close();
+            //pdf.Save("firstpage.pdf");
+            //Process.Start("firstpage.pdf");
+            //pdf.Close();
 
 		}
     }
