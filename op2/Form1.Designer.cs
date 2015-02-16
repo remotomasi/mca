@@ -64,10 +64,10 @@
             this.pictureRain = new System.Windows.Forms.PictureBox();
             this.pictureWind = new System.Windows.Forms.PictureBox();
             this.tabMaps = new System.Windows.Forms.TabControl();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.picture850t = new System.Windows.Forms.PictureBox();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.picture500p = new System.Windows.Forms.PictureBox();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.picture850t = new System.Windows.Forms.PictureBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -94,10 +94,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureRain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureWind)).BeginInit();
             this.tabMaps.SuspendLayout();
-            this.tabPage5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picture850t)).BeginInit();
             this.tabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture500p)).BeginInit();
+            this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picture850t)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -495,25 +495,6 @@
             this.tabMaps.Size = new System.Drawing.Size(685, 611);
             this.tabMaps.TabIndex = 8;
             // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.picture850t);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(677, 585);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "850 hPa Temperature";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // picture850t
-            // 
-            this.picture850t.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picture850t.Location = new System.Drawing.Point(0, 0);
-            this.picture850t.Name = "picture850t";
-            this.picture850t.Size = new System.Drawing.Size(678, 585);
-            this.picture850t.TabIndex = 0;
-            this.picture850t.TabStop = false;
-            // 
             // tabPage6
             // 
             this.tabPage6.Controls.Add(this.picture500p);
@@ -532,6 +513,25 @@
             this.picture500p.Size = new System.Drawing.Size(678, 585);
             this.picture500p.TabIndex = 0;
             this.picture500p.TabStop = false;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.picture850t);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(677, 585);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "850 hPa Temperature";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // picture850t
+            // 
+            this.picture850t.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picture850t.Location = new System.Drawing.Point(0, 0);
+            this.picture850t.Name = "picture850t";
+            this.picture850t.Size = new System.Drawing.Size(678, 585);
+            this.picture850t.TabIndex = 0;
+            this.picture850t.TabStop = false;
             // 
             // tabPage3
             // 
@@ -709,10 +709,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureRain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureWind)).EndInit();
             this.tabMaps.ResumeLayout(false);
-            this.tabPage5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picture850t)).EndInit();
             this.tabPage6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picture500p)).EndInit();
+            this.tabPage5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picture850t)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
