@@ -442,7 +442,7 @@ namespace op2
                     //                    " ma i tab Andamento e Spaghi non sono coerenti: \n" + 
                     //                    " se vuoi coerenza nelle previsioni \n" + 
                     //                    " digita il nome di un'altra città! ;-)");
-                    this.errorLbl.Text = "Errore: dati non trovati!\nRiprova o seleziona altra città";
+                    this.errorLbl.Text = "Dati citta' attualmente non disponibili: riprovare in un secondo momento.";
                     this.pictureEvo.ImageLocation = "";
                     this.pictureSpaghi.ImageLocation = "";
                     this.picture850t.Focus();
