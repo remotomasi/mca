@@ -43,7 +43,6 @@
             this.longBox = new System.Windows.Forms.TextBox();
             this.latBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cityCombo = new System.Windows.Forms.ComboBox();
             this.errorLbl = new System.Windows.Forms.Label();
             this.cittaLbl = new System.Windows.Forms.Label();
@@ -87,7 +86,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.cityGroup.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureSat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEvo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureSpaghi)).BeginInit();
@@ -248,7 +246,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.cityCombo);
             this.groupBox1.Controls.Add(this.errorLbl);
             this.groupBox1.Controls.Add(this.cittaLbl);
@@ -270,14 +267,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Situazione attuale in Italia";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(179, 22);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 69);
-            this.pictureBox1.TabIndex = 69;
-            this.pictureBox1.TabStop = false;
-            // 
             // cityCombo
             // 
             this.cityCombo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -292,9 +281,9 @@
             // 
             this.errorLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.errorLbl.ForeColor = System.Drawing.Color.Red;
-            this.errorLbl.Location = new System.Drawing.Point(198, 91);
+            this.errorLbl.Location = new System.Drawing.Point(198, 21);
             this.errorLbl.Name = "errorLbl";
-            this.errorLbl.Size = new System.Drawing.Size(121, 27);
+            this.errorLbl.Size = new System.Drawing.Size(121, 95);
             this.errorLbl.TabIndex = 68;
             this.errorLbl.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
@@ -702,7 +691,6 @@
             this.cityGroup.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureSat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEvo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureSpaghi)).EndInit();
@@ -784,7 +772,6 @@
         private System.Windows.Forms.GroupBox roseBox;
         private System.Windows.Forms.Label errorLbl;
         private System.Windows.Forms.ComboBox cityCombo;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
