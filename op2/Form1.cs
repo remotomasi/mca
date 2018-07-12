@@ -482,7 +482,7 @@ namespace op2
                 while (!reader.EOF && reader.Name != "yweather:atmosphere")
                     reader.Read();
                 reader.MoveToContent();
-                pressureBox0.Text = "Pressione': " + Convert.ToInt32(reader.GetAttribute("pressure").ToString().Replace(".","")) * 0.3386  + " hPa" + "\n";
+                pressureBox0.Text = "Pressione': " + Convert.ToInt32(reader.GetAttribute("pressure").ToString().Replace(".","")) * 10  + " hPa" + "\n";
 
                 while (!reader.EOF && reader.Name != "yweather:condition")
                     reader.Read();
